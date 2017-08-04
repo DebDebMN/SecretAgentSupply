@@ -1,0 +1,58 @@
+/* This is the css file for Codecademy's Unit 5 Secret Agent Supply project: index.html.  */
+
+/* Style for whole page for font. */
+body {
+  font-family: Helvetica;
+  font-size: 18px;
+  color: white;
+  margin: 0;
+}
+
+
+
+/* Style navigation links for whole page. */
+a:link,
+a:visited {
+  color: color;
+}
+
+/* mouse over link */
+a:hover {
+    color: yellow;
+}
+
+/*****************
+   HEADER
+ *****************
+    This creates the whole black strip on top that runs the full length of
+    the screen no matter what size.  */
+.whole-header {
+  background-color: black;
+
+  /* This places the logo and header text box in center. */
+  display: flex;
+  justify-content: center;
+}
+
+  /* This creates the box that the logo and header text reside in.  Note
+    that the box can only be 960px wide per spec.  */
+  .logo-and-text{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 960px;
+    border: thin solid red;     /********* REMOVE BEFORE PUBLISH **********/
+  }
+
+  /*  This sets the height of the logo plus the margin on each side. */
+  .logo-and-text img{
+    height: 1.5rem;
+    margin-left: 0.5rem;
+    margin-right: 1rem;
+  }
+
+  /*  This places spacing from the top and bottom of letters to edge of header per spec. */
+  .header-text p {
+    padding-top: 0.66rem;
+    padding-bottom: 0.66rem;
+  }
