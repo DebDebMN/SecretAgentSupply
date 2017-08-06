@@ -236,8 +236,27 @@ This creates the background image where the new arrivals box resides.  */
     /* border: thin solid purple; */
   }
   .databox p{
-    color: darkgray;
+    color: black;
 
   }
 
-  
+  /*******************
+        FOOTER
+  ********************
+  */
+.footer-outerbox{
+  height: 5rem;
+  margin-top: 4rem;
+  background-color: black;
+  /* border: thin solid red; */
+
+  display: flex;
+  justify-content: center;
+}
+
+.footer-innerbox {
+  display: flex;
+  align-items: center;
+  width: 960px;
+  /* border: thin solid yellow; */
+}
