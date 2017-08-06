@@ -2,16 +2,23 @@
 
 /* Style for whole page for font. */
 
-html,
+html {
+  font-size: 18px;
+}
+
 body {
   font-family: Helvetica;
-  font-size: 18px;
+
   color: white;
   /* margin: 0; */
   position:relative;
   top: 0px;
 }
 
+h1,
+h4 {
+  font-weight: bold;
+}
 
 /* Style navigation links for whole page. */
 a:link,
@@ -72,45 +79,38 @@ This creates the background image where the new arrivals box resides.  */
   background-size: cover;
   display: block;
   height: 25rem;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
 }
 .new-arrivals-container {
   /* This places the new arrivals header and new arrivals text box
-  in center vertically and against the 960px left side with a length of 20rem. */
-  background-color: black;
-  width: 25rem;  /* was 20rem */
-  margin: 9rem 0rem 0rem 0rem;
+  in center vertically and against the 960px left side with a length of auto. */
+  max-width: 960px;
+  margin: 0 auto;
 
-  display: flex;
-  flex-direction: column;
   /* border: thin solid green; */
 }
-
+/*
 .new-arrivals-title p{
-  font-size: 1rem;
+  font-size: 1em;
   font-weight: bold;
-  padding: 2rem 0rem 0.25rem 3rem;
-/*  border: thin solid yellow; */
+  padding: 2em 0em 0.25em 3em;
+}
+*/
+.new-arrivals {
+  background-color: black;
+  width: 20em;  /* was 20rem */
+  position: relative;
+  top: 9em;
+  padding: 2em 3em;
 }
 
-.new-arrivals-items {
-  padding: 0rem 0rem 3rem 3rem;
-}
-.new-arrivals-items p{
+.new-arrivals h1{
   font-size: 2rem;
   font-weight: bold;
-  /* border: thin solid red; */
+  line-height: 1.2em;
+  margin: 0.25em 0;
+
 }
 
-.dummy-container {
-  width: 20rem;
-  margin: 9rem 0rem 0rem 0rem;
-  opacity: 0;
-}
 
 /*****************
     NAV
@@ -137,60 +137,68 @@ This creates the background image where the new arrivals box resides.  */
   text-decoration: none;
 }
 
+.small-nav {
+  width: 960px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.small-nav a {
+  text-decoration: none;
+}
+
 /*****************
     PRODUCTS
 ******************
 */
 
 .showcase {  /* Creates an invisible box centered, width 960px */
-  width: 960px;
-  margin: auto;  /* this aligns big box at center */
+  max-width: 960px;
+  margin: 0 auto;  /* this aligns big box at center */
+}
 
+.products {
+  margin: 3em 0 0 0;
+  width: auto;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   /* border: thin solid red; */
 }
 
 .productbox {
   width: 30%;
-  height: 15rem;
-  margin-top: 3rem;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* border: thin solid yellow; */
 }
 .topbox {
-  height: 13rem;
-  width: 100%;
+ height: 9em;
+  padding: 2em 0;
   border: 4px solid black;
-
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.textbox {
-  display: flex;
-  width: 100%;
-  background-color: black;
-  border: 4px solid black;
-  justify-content: center;
-}
+.topbox img {
+  /* height: 9rem; */
+max-width: 8em;
 
+}
+.textbox {
+
+display: block;
+background-color: black;
+color: white;
+text-align: center;
+padding: 0.5em;
+}
+/*
 .textbox p {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
+*/
 
-.topbox img {
-  height: 9rem;
-  max-width: 90%;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
 
 /*******************
   LOCAL and HOURS
@@ -198,23 +206,22 @@ This creates the background image where the new arrivals box resides.  */
 */
 
 .infobox {  /* Creates an invisible box centered, width 960px */
-  width: 960px;
-  margin: auto;  /* this aligns big box at center */
-
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  max-width: 960px;
+  margin: 0 auto;  /* this aligns big box at center */
   /* border: thin solid red; */
 }
 
-.outerbox {
-  width: 35%;
-  height: 4rem;
-  margin-top: 3rem;
+.infoboxes {
+  margin: 3rem 0 4rem 0;
 
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: left;
+}
+
+.outerbox {
+    width: 35%;
+
   /* border: thin solid yellow; */
 }
   .titlebox {
@@ -223,40 +230,92 @@ This creates the background image where the new arrivals box resides.  */
     height: 3rem;
     background-color: black;
     justify-content: left;
+    align-items: center;
+    /* margin: 1rem 0rem 1rem 2rem; */
 }
-
+/*
   .titlebox p{
     margin-left: 3rem;
-    margin: 1rem 0rem 1rem 2rem;
-  }
+  } */
 
   .databox {
-    display:flex;
-    justify-content: left;
+    display: block;
+    color: black;
+    text-align: left;
     /* border: thin solid purple; */
   }
-  .databox p{
-    color: black;
 
-  }
 
   /*******************
         FOOTER
   ********************
   */
 .footer-outerbox{
-  height: 5rem;
-  margin-top: 4rem;
-  background-color: black;
-  /* border: thin solid red; */
+  max-width: auto;
+  margin: 0 auto;  /* this aligns big box at center */
 
+  /* border: thin solid red; */
+  background-color: black;
   display: flex;
+  align-items: center;
   justify-content: center;
 }
 
 .footer-innerbox {
-  display: flex;
-  align-items: center;
+  height: 5rem;
   width: 960px;
+  margin-top: 4rem;
+  align-text: left;
   /* border: thin solid yellow; */
+}
+
+@media only screen and (min-width: 1025px) {
+  .small-nav {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .container,
+  .productbox.glasses {
+    display: none;
+  }
+
+  html, body {
+    font-size: 16px;
+  }
+  .productbox {
+    width: 47%;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .productbox.watch {
+    display: none;
+  }
+
+  .productbox {
+    width: 90%;
+  }
+
+  .products{
+    justify-content: center;
+  }
+
+  .outerbox {
+    width: 90%;
+  }
+
+  .infoboxes {
+    flex-wrap: wrap;
+  }
+
+  .footer-innerbox {
+    text-align: center;
+  }
+
+  .databox {
+    margin-bottom: 0.5rem;
+  }
+
 }
